@@ -17,7 +17,8 @@ public class Subject {
     private int id;
     @Column(name="subject")
     private String subject;
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name="id", referencedColumnName = "id")
+    private Teacher teacher;
 
-    @Column(name="Teacher")
-    private Teacher teachef;
 }
